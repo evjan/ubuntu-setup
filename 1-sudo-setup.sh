@@ -1,14 +1,11 @@
 set -e
 
-apt-get -y update
-apt-get -y upgrade
+apt-get -y --force-yes update
+apt-get -y --force-yes upgrade
 
-apt-get -y install emacs24
-apt-get -y install rbenv
-apt-get -y install ruby-build
-apt-get -y install git
+apt-get -y --force-yes install build-essential
 
-rbenv install 2.0.0-p0
-rbenv global 2.0.0-p0
+apt-get -y --force-yes install emacs
+apt-get -y --force-yes install git
 
-gem install bundler
+echo "Done!"
